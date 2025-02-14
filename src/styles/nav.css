@@ -1,0 +1,76 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Floating Glass Navbar */
+.glass-navbar {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Logo */
+.nav-icon img {
+  width: 8  0px;
+  height: auto;
+}
+
+/* Navigation Items */
+.nav-items ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-items li {
+  /* color: white; */
+  cursor: pointer;
+  font-size: 18px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.nav-items li:hover {
+  background: rgba(255, 255, 255, 0.368);
+}
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .glass-navbar {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+  }
+
+  .nav-items ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-items li {
+    width: 100%;
+    text-align: center;
+  }
+}
+
